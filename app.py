@@ -4,6 +4,9 @@ from config import app_config
 
 app = Flask(__name__)
 
+@app.route('/')
+def default():
+    return 'UP'
 
 @app.route('/get_hist', methods=['POST'])
 def get_hist():
